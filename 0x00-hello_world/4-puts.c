@@ -1,9 +1,11 @@
 #!/bin/bash
-#include <stdio.h>
 
+#include <stdio.h>
 /**
 
- * main - main block
+ * main - main print function
+
+ *
 
  * Return: 0
 
