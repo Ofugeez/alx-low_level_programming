@@ -1,19 +1,18 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+
 /**
- * main - Print alphabets in reverse order
+ * main - Prints alphabets in reverse order.
  *
- * Return: Always 0 (success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char low;
+int i;
 
-	for (low = 'z'; low >= 'a'; low--)
-		putchar(low);
-		putchar('\n');
-
-	return (0);
+for (i = 122; i > 96; i--)
+{
+putchar(i);
 }
-
+putchar('\n');
+return (0);
+}
