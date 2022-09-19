@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * reset_to_98 - reset the value of an interger to 98
+ * reset_to_98 - resets the value of given interger to 98
  * @n: parameter
- * Return: Always 0
+ * Return: nothing
  */
 
 void reset_to_98(int *n);
