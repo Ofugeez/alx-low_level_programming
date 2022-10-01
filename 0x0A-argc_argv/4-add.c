@@ -25,7 +25,7 @@ int _atoi(char *s)
 	{
 		if (s[i] == '-')
 			++d;
-		
+
 		if (s[i] >= '0' && s[i] <= '9')
 		{
 			digit = s[i] - '0';
@@ -56,7 +56,7 @@ int _atoi(char *s)
 int main(int argc, char *argv[])
 {
 	int sum, num, i, j, k;
-	
+
 	sum = 0;
 
 	for (i = 1; i < argc; i++)
