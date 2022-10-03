@@ -1,46 +1,46 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * alloc_grid - Entry point
- * @width: rows of matrix
- * @height: columns of string
- * Return: a pointer to a 2 dimensional array of integers or null
+ * alloc_grid - allocates a 2 dimensional array of integers
+ * @width: width of the 2 dimensional array
+ * @height: height of the 2 dimensional array
+ *
+ * Return: pointer to the newly allocated 2 dimensional array
  */
+
 int **alloc_grid(int width, int height)
 {
-	int **matrix;
 	int i;
 	int j;
-	int l;
-	int *p;
+	int **ar;
 
-	f (width <= 0 || height <= 0)
+	if (width == 0 || height == 0)
 		return (NULL);
-	matrix = (int **)malloc(height * sizeof(int *));
-	if (matrix == NULL)
+
+	ar = malloc(height * sizeof(int *));
+
+	if (ar == NULL)
 		return (NULL);
+
 	for (i = 0; i < height; i++)
 	{
-		*(matrix + i) = (int *)malloc(width * sizeof(int));
-		if (*(matrix + i) == NULL)
+		ar[i] = malloc(width * sizeof(int));
+		if (ar[i] == NULL)
 		{
-			for (i = 0; i < height; i++)
-			{
-				p = matrix[i];
-				free(p);
-			}
-			free(matrix);
+			for (i = i - 1; i >= 0; i--)
+				free(ar[i]);
+			
+			free(ar);
 			return (NULL);
 		}
 	}
-	for (l = 0; l < height; l++)
+
+	for (i = 0; i < height; i++)
 	{
 		for (j = 0; j < width; j++)
-		{
-			matrix[l][j] = 0;
-		}
+			ar[i][j] = 0;
 	}
-	return (matrix);
+
+	return (ar);
 }
