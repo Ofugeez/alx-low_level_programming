@@ -1,23 +1,19 @@
+#include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main - program that prints it name followed by a new line
- * @argc: argument that containes argument input
- * @argv: argument that stores the strings in an array of char* (strings)
- * Retur: 0
+ * main - multiplies two numbers
+ * @argv: array of pointers to strings
+ * @argc: argument count
+ * Return: 0 or 1
  */
 int main(int argc, char *argv[])
 {
-	int num_1, num_2, mul;
-
-	if (arg != 3)
-		printf("error\n');
-	else
+	if (argc != 3)
 	{
-		num_1 = atoi(argv[1]);
-		num_2 = atoi(argv[2]);
-		mul = num_1 * num_2;
-		printf("%dn", mul);
+		printf("Error\n");
+		return (1);
 	}
-	Return (0);
+	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+	return (0);
 }
