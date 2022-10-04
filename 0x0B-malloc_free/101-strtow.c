@@ -82,7 +82,7 @@ int print_words(int *pos, char **m, char *str, int words)
 	int b = 0;
 	int b1 = 0;
 	int l = 0;
-	
+
 	for (b = 0; b < words; b++)
 	{
 		int p1 = *(pos + b1);
@@ -115,7 +115,7 @@ char **strtow(char *str)
 	int words;
 	char **m = NULL;
 	int *pos = NULL;
-	
+
 	if (str == NULL || *str == 0)
 		return (NULL);
 	words = count_words(str);
