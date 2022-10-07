@@ -8,7 +8,7 @@
  void print_str(char *str)
 {
 	int i;
-	
+
 	i = 0;
 	while (str[i] != '\0')
 	{
@@ -43,7 +43,7 @@ void rev_string(char *s, int size)
 	char *str;
 	int i, r;
 	str = malloc(size);
-	
+
 	if (str == NULL)
 		print_err();
 	i = 0;
@@ -91,7 +91,7 @@ unsigned int str_len(char *str)
 char *init(char *arr, int size)
 {
 	int i;
-	
+
 	i = 0;
 	while (i < size)
 	{
@@ -110,7 +110,7 @@ char *init(char *arr, int size)
 int _isstrdigit(char *str)
 {
 	int i;
-	
+
 	i = 0;
 	while (str[i] != '\0')
 	{
@@ -230,7 +230,7 @@ char *check_zero(char *str, int len)
 			print_err();
 		num[0] = '0';
 		num[1] = '\0';
-	}	
+	}
 	else
 	{
 		num = malloc(len + 1);
